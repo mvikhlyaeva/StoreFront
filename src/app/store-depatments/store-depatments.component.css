@@ -1,0 +1,83 @@
+.head{
+    display: flex;
+    margin: 20px auto;
+    width: 100%;
+    font-size: 110%;
+}
+.content{
+    /* justify-content: flex-start; */
+    flex-wrap: wrap;
+    display: flex;
+    width: 400%;
+    flex-direction: column;
+    margin: auto;
+}
+.title{
+    display: flex;
+    margin: auto;
+    /* //background-color:#ffc738bb;
+    //border-radius: 25%; */
+    padding: 0.3em 1em;
+}
+.SD{
+    display: flex;
+    background-color: #37de7afa;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    align-content: space-between;
+    width: 300px;
+    margin: auto;
+    flex-direction: row;
+     /* margin-right: 10px; */
+    margin-bottom: 10px; 
+    border-radius: 5px;
+    position: relative;
+}
+.x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-decoration: none;
+    background-color: black;
+    color:#22a858fa;
+    border-radius: 5px;
+    padding:0  0.3em;
+}
+.x:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    width: 100px;
+    padding: 5px 5px;
+    bottom: 80%;
+    /* left: 100%; */
+    margin-left: -100px;
+    opacity: 80%;
+    border-radius: 7px;
+    background-color: #35cc71fa;
+    text-align: center;
+    color: #000;
+    cursor: default;
+  }
+h2{
+    margin-bottom: 3px;
+}
+a{
+    text-decoration: none;
+}
+  span{
+      color: #63706694;
+      text-decoration: none;
+  }
+  span:hover{
+      color:black;
+  }
+  img{
+    background-size: 80px auto;
+    width: 80px;
+  }
+
+@media (max-width: 600px) {
+    .content{
+        width: 100%;
+    }
+    }

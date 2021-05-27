@@ -1,0 +1,25 @@
+<div class ="content">
+    <div class="head">
+        <h1 class ="title">Store Departments</h1>
+    </div>
+    
+    <div class="SD" *ngFor ="let sd of storeDepartments">
+        <a href="#" data-info="DELETE DEPARTMENT" class="x">X</a>
+        <h2>Store: {{sd.StoreId}} </h2>
+        <h2>Department: {{sd.DepartmentId}} </h2>
+        <!-- <h2>{{getScheme(sd)}}</h2> --> 
+        <a  routerLink='/store/{{sd.StoreId}}/department/{{sd.DepartmentId}}'>
+        <span>Get Scheme</span>
+        </a>
+        <a >
+            <span>Change Scheme</span>
+            </a>     
+    </div>
+    <div class="SD">
+        <a >
+           <img src="http://pngimg.com/uploads/plus/plus_PNG110.png" alt=""> 
+        </a>
+            
+    </div>
+</div>
+
