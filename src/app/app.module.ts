@@ -6,6 +6,9 @@ import { StoreDepatmentsComponent } from './store-depatments/store-depatments.co
 import { AppRoutingModule } from './app-routing.module';
 import { StoreDepartmentGetSchemeComponent } from './store-department-get-scheme/store-department-get-scheme.component';
 
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +17,9 @@ import { StoreDepartmentGetSchemeComponent } from './store-department-get-scheme
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
