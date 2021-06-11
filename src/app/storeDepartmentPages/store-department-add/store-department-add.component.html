@@ -1,0 +1,36 @@
+<div class="container card col-md-7 col-lg-5 col-11 mt-5">
+    <h2 class="card-title mx-auto">Add Department</h2>
+<form> 
+    <div class="form-group">
+        <div class="mb-3 row">
+            <label for="storeId" class="col-5 col-form-label">Store</label>
+            <div class="col-7">
+              <input type="number" id="storeId"  [(ngModel)]="newSD.storeId" name="storeId">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="departmentId" class="col-5 col-form-label">Department</label>
+            <div class="col-7">
+              <input type="number" id="departmentId" [(ngModel)]="newSD.departmentId" name="departmentId">
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-3 col-form-label">Email</label>
+            <div class="col-9">
+                <select class="form-control" id=scheme>
+                    <option value="0"> ClientBackAddress</option>
+                    <option value="1">OnlyBack</option>
+                    <option value="2">ClientAndBackExtentded</option>
+                  </select>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="AddStoreDepartment()">Submit</button>
+  </form>
+</div>
+
+<app-alert-for-add-store-department *ngIf="done" [storeDepartment]="storeDepartment" (okButtonClick)="goToApp()">   
+</app-alert-for-add-store-department>
+
+
+

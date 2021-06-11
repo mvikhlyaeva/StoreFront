@@ -1,0 +1,47 @@
+.card{
+    background-color: #35cc71fa;
+}
+.x{
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+}
+.x:hover::after {
+    content: attr(data-info);
+    position: absolute;
+    width: 100px;
+    padding: 5px 5px;
+    bottom: 80%;
+    margin-left: -100px;
+    opacity: 80%;
+    border-radius: 7px;
+    background-color: #35cc71fa;
+    text-align: center;
+    color: #000;
+    cursor: default;
+  }
+h2{
+    margin-bottom: 3px;
+}
+a {
+    text-decoration: none;
+}
+h5{
+    color: #252c2794;
+    /* margin-left: 80px; */
+    text-align: center;
+}
+h5:hover{
+    color:black;
+}
+  span{
+      color: #63706694;
+      text-decoration: none;
+  }
+  span:hover{
+      color:black;
+  }
+  img{
+    width: 182px; 
+  }

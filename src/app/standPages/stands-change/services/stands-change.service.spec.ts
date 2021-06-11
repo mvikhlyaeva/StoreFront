@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GetSchemeService } from './get-scheme.service';
+import { StandsChangeService } from './stands-change.service';
 
-describe('GetSchemeService', () => {
-  let service: GetSchemeService;
+describe('StandsChangeService', () => {
+  let service: StandsChangeService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GetSchemeService);
+    service = TestBed.inject(StandsChangeService);
   });
 
   it('should be created', () => {

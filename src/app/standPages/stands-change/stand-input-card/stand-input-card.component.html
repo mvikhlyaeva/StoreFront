@@ -1,0 +1,33 @@
+<div class = "card-body">
+    <button type="button" class="btn-close btn position-relative start-100 translate-middle" (click)="removeStand(stand)" ></button> 
+    <div class="mb-2 row" *ngIf="stand.id!=null">
+        <label  class="col-5 col-form-label">Id</label>
+        <div class="col-7  row">
+        <input class="id" type="number" id="id"  [(ngModel)]="stand.id" >
+        </div>
+    </div>
+    <div class="mb-2 row">
+        <label for="code" class="col-5 col-form-label">Code</label>
+        <div class="col-7 row">
+        <input type="text" id="code" [(ngModel)]="stand.code">
+        </div>
+    </div>
+    <div class="mb-2 row">
+        <label for="size" class="col-5 col-form-label">Size</label>
+        <div class="col-7 row">
+        <input type="number" id="size"  [(ngModel)]="stand.size">
+        </div>
+    </div>
+    <div class="mb-2 row">
+        <label for="position" class="col-5 col-form-label">Position</label>
+        <div class="col-7 row">
+        <input type="number" id="position"  [(ngModel)]="stand.position">
+        </div>
+    </div>
+    <div class="mb-2 row">
+        <label for="side" class="col-5 col-form-label">Side</label>
+        <div class="col-7 row">
+        <input type="number" id="side" [(ngModel)]="stand.side">
+        </div>
+    </div>
+</div>   

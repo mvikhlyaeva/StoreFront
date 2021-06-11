@@ -1,0 +1,10 @@
+<div class="container">
+    <h2 class="mb-3"> Stands </h2>
+    <div class="form">  
+        <div class="Stand card col-lg-4 mx-auto mb-3 col-sm-6 col-10" *ngFor="let s of stands">
+            <app-stand-input-card [stand]="s" (onDeleteInputCard)="RemoveInput($event)"></app-stand-input-card>
+        </div>  
+        <button class="btn btn-primary position-fixed top-0  add" (click)=addInput()> Add </button> 
+        <button class="btn btn-primary position-fixed top-0  submit" (click)=submit()> Submit </button> 
+    </div>
+</div>

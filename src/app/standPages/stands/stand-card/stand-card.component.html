@@ -1,0 +1,16 @@
+<div class="card">
+    <div class = "card-body"> 
+        <h3 class="card-title">Id: {{stand.id}} </h3>
+        <div class="row">
+            <h4 class="col-7">Code: {{stand.code}} </h4>
+            <h4 class="col-5">Size: {{stand.size}} </h4>
+        </div>
+        <div class="row">
+            <h4 class="col-7">Position: {{stand.position}} </h4>
+            <h4 class="col-5">Side: {{stand.side}} </h4>
+        </div>
+        <a class="card-link text-decoration-none" routerLink='/cells/stand/{{stand.id}}'>
+            <h5>View cells</h5>
+        </a> 
+    </div>    
+</div>

@@ -1,0 +1,20 @@
+<div class ="container-fluid">
+    <div class="head">
+        <h1 class ="title">Store Departments</h1>
+    </div>
+    <div  class="row" *ngIf="done">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3 "  *ngFor ="let sd of storeDepartments">
+            <app-store-department-card [sd]="sd" (onDeleteClick)="deleteDepartment($event)"></app-store-department-card>
+        </div>
+        <div *ngIf="done" class="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div class="card">
+                <a class="row"routerLink='/add'>
+                <img class="mx-auto" src="http://pngimg.com/uploads/plus/plus_PNG110.png" alt=""> 
+                </a>   
+            </div>
+        </div>
+    </div>   
+</div>
+<app-modal-delete  (clickDelete)="deleteStoreDepartment()"></app-modal-delete>
+
+

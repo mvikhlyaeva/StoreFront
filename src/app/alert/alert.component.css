@@ -1,0 +1,8 @@
+.messages{
+    position: absolute ; 
+    top: 5%; 
+    left:30%; 
+    right:30%; 
+    padding:3em 0; 
+    width: 40%;
+}

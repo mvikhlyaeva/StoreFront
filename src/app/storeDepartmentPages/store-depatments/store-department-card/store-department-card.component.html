@@ -1,0 +1,24 @@
+<div class="card">
+    <div class = "card-body">
+        <button type="button" class="btn-close x" data-info="DELETE DEPARTMENT" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" aria-label="Close" (click)="GetId(sd)">
+        </button>
+
+        <h2  class="h3"card-title>Store: {{sd.storeId}} </h2>
+        <h2 class="h3">Department: {{sd.departmentId}} </h2>
+
+        <a class="card-link" routerLink='/store/{{sd.storeId}}/department/{{sd.departmentId}}'>
+            <span>Get Scheme</span>
+        </a>
+
+        <a class="card-link" routerLink='/changeScheme/store/{{sd.storeId}}/department/{{sd.departmentId}}'>
+            <span>Change Scheme</span>
+        </a> 
+
+        <a class="card-link" routerLink='/stands/store/{{sd.storeId}}/department/{{sd.departmentId}}'>
+            <h5>View stands</h5>
+        </a> 
+ 
+    </div> 
+</div> 
+

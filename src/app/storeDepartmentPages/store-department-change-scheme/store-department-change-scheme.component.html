@@ -1,0 +1,37 @@
+<div class="container card col-md-7 col-lg-5 col-11 mt-5">
+    <h2 class="card-title mx-auto">Change the scheme</h2>
+<form> 
+    <div class="form-group">
+        <div class="mb-3 row">
+            <label for="storeId" class="col-5 col-form-label">Store</label>
+            <div class="col-7">
+              <input type="text" readonly class="form-control-plaintext" id="storeId" value={{storeId}}>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label for="departmentId" class="col-5 col-form-label">Department</label>
+            <div class="col-7">
+              <input type="text" readonly class="form-control-plaintext" id="departmentId" value={{departmentId}}>
+            </div>
+        </div>
+        <div class="mb-3 row">
+            <label class="col-3 col-form-label">Email</label>
+            <div class="col-9">
+                <select class="form-control" id=selectScheme>
+                    <option value="0"> ClientBackAddress</option>
+                    <option value="1">OnlyBack</option>
+                    <option value="2">ClientAndBackExtentded</option>
+                  </select>
+            </div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-primary" (click)="ChangeScheme()">Submit</button>
+  </form>
+</div>
+
+
+<div class="alert alert-success alertDisp d-none col-10 col-md-5 position-absolute top-50 start-50 translate-middle" role="alert">
+    <h4 class="alert-heading">Scheme changed successfully!</h4>
+    <p class="mess"></p>
+    <button class="btn btn-success" (click)="goToApp()"> Ok </button>
+  </div>

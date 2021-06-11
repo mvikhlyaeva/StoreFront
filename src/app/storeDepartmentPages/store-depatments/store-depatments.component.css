@@ -1,0 +1,15 @@
+.head{
+    display: flex;
+    margin: 20px auto;
+}
+.title{
+    display: flex;
+    margin: auto;
+    padding: 0.3em 1em;
+}
+ .card{
+    background-color: #35cc71fa;
+}
+  img{
+     width: 182px; 
+  }  

@@ -2,8 +2,11 @@
     @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
     </style>
 
-<div class="main">
-   <!-- <h1>{{title}}</h1> -->
-  <!-- <app-store-depatments></app-store-depatments> -->
+<div class="main"> 
   <router-outlet></router-outlet>  
 </div>
+<div *ngFor="let errorMessage of errorMessages">
+    <app-alert [errorMessage]="errorMessage"></app-alert>
+</div>
+
+

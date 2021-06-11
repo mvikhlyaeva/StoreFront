@@ -1,0 +1,15 @@
+<div class ="container-fluid">
+    <div class="head">
+        <h1 class ="title mb-3">Stands</h1>
+    </div>
+    <div *ngIf="done" class="row">
+        <div>
+            <a routerLink='/stands/store/{{storeId}}/department/{{departmentId}}/change'>
+              <button class="btn btnChange position-absolute mb-1"> Change </button>
+            </a>   
+        </div> 
+        <div class="col-lg-4 mx-auto mb-3 col-sm-6 col-10"  *ngFor ="let stand of stands">
+            <app-stand-card [stand]="stand"></app-stand-card>
+        </div>  
+    </div>   
+</div>
