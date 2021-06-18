@@ -1,0 +1,10 @@
+a{
+    text-decoration: none;
+    text-align: center;
+    color: #23292494;
+    padding: 0.3em; 
+    background-color: #f2f8f2; 
+}
+a:hover{
+    color:rgb(48, 46, 46);
+}
