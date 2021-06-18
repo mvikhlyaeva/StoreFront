@@ -2,9 +2,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Stand } from 'tables/Stand';
 
 @Component({
-  selector: 'app-stand-input-card',
-  templateUrl: './stand-input-card.component.html',
-  styleUrls: ['./stand-input-card.component.css']
+    selector: 'app-stand-input-card',
+    templateUrl: './stand-input-card.component.html',
+    styleUrls: ['./stand-input-card.component.css']
 })
 export class StandInputCardComponent implements OnInit {
 
@@ -12,13 +12,13 @@ export class StandInputCardComponent implements OnInit {
 
     @Output() onDeleteInputCard: EventEmitter<Stand> = new EventEmitter();
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
 
-  removeStand(stand){
-    this.onDeleteInputCard.emit(stand);
-  }
+    removeStand(stand) {
+        this.onDeleteInputCard.emit(stand);
+    }
 
 }

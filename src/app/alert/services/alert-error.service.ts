@@ -2,7 +2,7 @@ import { EventEmitter, Injectable, Output } from '@angular/core';
 import { Observable, of, Subject, throwError } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class AlertErrorService {
 
@@ -13,10 +13,10 @@ export class AlertErrorService {
     mess: string = "My message"
 
     constructor() {
-      }
+    }
 
-  retMess(mess){
-    this.eventCallback.next(mess);
-  }
+    retMess(mess) {
+        this.eventCallback.next(mess);
+    }
 
 }

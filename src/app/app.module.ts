@@ -23,6 +23,7 @@ import { CellsComponent } from './cellPages/cells/cells.component';
 import { CellCardComponent } from './cellPages/cells/cell-card/cell-card.component';
 import { ParamInterceptor } from './api.interceptor';
 import { AddStoreDepartmentService } from './storeDepartmentPages/Services/add-store-department.service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { AddStoreDepartmentService } from './storeDepartmentPages/Services/add-s
     AlertForAddStoreDepartmentComponent,
     StandCardComponent,
     CellsComponent,
-    CellCardComponent
+    CellCardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

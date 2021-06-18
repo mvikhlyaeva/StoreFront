@@ -3,9 +3,9 @@ import { CellType } from 'dataTypes/CellType';
 import { Cell } from 'tables/Cell';
 
 @Component({
-  selector: 'app-cell-card',
-  templateUrl: './cell-card.component.html',
-  styleUrls: ['./cell-card.component.css']
+    selector: 'app-cell-card',
+    templateUrl: './cell-card.component.html',
+    styleUrls: ['./cell-card.component.css']
 })
 export class CellCardComponent implements OnInit {
 
@@ -13,11 +13,11 @@ export class CellCardComponent implements OnInit {
 
     cellType: string;
 
-  constructor() { }
+    constructor() { }
 
-  ngOnInit(): void {
-      this.cellType = CellType[this.cell.type];
-      console.log(this.cellType);
-  }
+    ngOnInit(): void {
+        this.cellType = CellType[this.cell.type];
+        console.log(this.cellType);
+    }
 
 }

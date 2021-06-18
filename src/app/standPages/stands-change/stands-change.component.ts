@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { GetStandsService } from '../services/get-stands.service';
-import { Location } from '@angular/common';
 import { Stand } from 'tables/Stand';
 import { StandsChangeService } from './services/stands-change.service';
 
@@ -19,7 +18,6 @@ export class StandsChangeComponent implements OnInit {
 
     constructor(
         private route: ActivatedRoute,
-        private location: Location,
         private router: Router,
         private getStandsService: GetStandsService,
         private standsChangeService: StandsChangeService
@@ -45,25 +43,22 @@ export class StandsChangeComponent implements OnInit {
 
     }
 
-    submit(){
+    submit() {
         console.log("submit: ", this.stands);
         this.standsChangeService.changeStands(this.storeId, this.departmentId, this.stands)
-        .subscribe((data)=>{
-            this.router.navigate(['stands/store/'+this.storeId+'/department/'+this.departmentId]);
-        })
+            .subscribe((data) => {
+                this.router.navigate(['stands/store/' + this.storeId + '/department/' + this.departmentId]);
+            })
     }
 
     addInput() {
         let st = new Stand();
         this.stands.push(st);
-        console.log('stands: ', this.stands);
-    } 
+    }
 
-    RemoveInput(stand: Stand){
+    RemoveInput(stand: Stand) {
         console.log('Stand in Remove: ', stand);
-        
         this.stands = this.stands.filter(item => item != stand);
-        console.log('stands: ', this.stands);
     }
 
 }

@@ -1,10 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ActivatedRoute, UrlSegment } from '@angular/router';
-import { Location } from '@angular/common';
 import { StoreDepartment } from 'tables/StoreDepartment';
 import {AddStoreDepartmentService} from '../Services/add-store-department.service'
-import { SchemeType } from 'dataTypes/ShemeType';
+
 @Component({
   selector: 'app-store-department-add',
   templateUrl: './store-department-add.component.html',
@@ -18,9 +16,7 @@ export class StoreDepartmentAddComponent implements OnInit {
     newSD: StoreDepartment;
 
   constructor(
-    private route: ActivatedRoute,
     private router: Router,
-    private location: Location,
     private addStoreDepartmentService: AddStoreDepartmentService
   ) { }
 
