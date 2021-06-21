@@ -13,6 +13,7 @@ export class CellsComponent implements OnInit {
     cells: Cell[];
     standId: number;
     done: boolean = false;
+    itemForDelete: Cell;
 
     constructor(
         private route: ActivatedRoute,
@@ -32,7 +33,7 @@ export class CellsComponent implements OnInit {
     }
 
     getCells() {
-        this.cellService.getStands(this.standId)
+        this.cellService.getCells(this.standId)
             .subscribe((data) => {
                 this.cells = data
                 this.done = true
@@ -40,4 +41,18 @@ export class CellsComponent implements OnInit {
             })
 
     }
+
+    getCellForDelete(cell: Cell){
+        this.itemForDelete = cell;
+    }
+
+    deleteCell(){
+        this.cellService.deleteCell(this.itemForDelete.id)
+        .subscribe(() => {
+            this.getCells();
+        })
+    document.getElementById("close").click();
+    }
+
+
 }

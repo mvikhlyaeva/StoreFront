@@ -7,8 +7,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class ModalDeleteComponent implements OnInit {
 
-    @Input() storeId: number;
-    @Input() departmentId: number;
+    @Input() component: string;
 
     @Output() clickDelete = new EventEmitter();
 
@@ -20,7 +19,6 @@ export class ModalDeleteComponent implements OnInit {
     }
 
     public DeleteStoreDepartmentChild() {
-        console.log(this.storeId);
         this.clickDelete.emit();
     }
 

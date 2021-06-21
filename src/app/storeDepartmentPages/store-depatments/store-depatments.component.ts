@@ -36,12 +36,10 @@ export class StoreDepatmentsComponent implements OnInit {
     }
 
     deleteDepartment(sd: StoreDepartment) {
-        console.log('sd: ', sd);
         this.itemForDelete = sd;
     }
 
     deleteStoreDepartment() {
-        console.log();
         this.deleteStoreDepartmentService
             .DelStoreDepartment(this.itemForDelete.storeId, this.itemForDelete.departmentId)
             .subscribe((data) => {

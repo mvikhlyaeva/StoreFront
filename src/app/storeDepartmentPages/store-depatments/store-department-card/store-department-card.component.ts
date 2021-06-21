@@ -19,7 +19,7 @@ export class StoreDepartmentCardComponent implements OnInit {
     ngOnInit(): void {
     }
 
-    GetId(sd) {
+    GetSD(sd) {
         this.onDeleteClick.emit(sd);
     }
 }

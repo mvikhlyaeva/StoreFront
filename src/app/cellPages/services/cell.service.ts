@@ -10,11 +10,16 @@ export class CellService {
 
     constructor(private http: HttpClient) { }
 
-    getStands(standId: number): Observable<Cell[]> {
+    getCells(standId: number): Observable<Cell[]> {
 
         const params = new HttpParams()
             .set('standId', '' + standId + '')
 
         return this.http.get<Cell[]>('api/cells', { params })
     }
+
+    deleteCell(cellId: number):Observable<Cell>{
+        return this.http.delete<Cell>('api/cells/'+cellId)
+    }
+    
 }

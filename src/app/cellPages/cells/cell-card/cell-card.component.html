@@ -1,5 +1,8 @@
 <div class="card">
     <div class = "card-body"> 
+        <button type="button" class="btn-close position-absolute end-0 top-0" data-info="DELETE CELLS" data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop" aria-label="Close" (click)="GetCell(cell)">
+        </button>
         <h3 class="card-title">Id: {{cell.id}} </h3>
         <div class="row">
             <h4 class="col-7">Code: {{cell.code}} </h4>
@@ -9,8 +12,5 @@
             <h4 class="col-7">Position: {{cell.position}} </h4>
             <h4 class="col-5">Type: {{cellType}} </h4>
         </div>
-        <!-- <a class="card-link text-decoration-none" routerLink='/cells/stand'>
-            <h5>View cells</h5>
-        </a>  -->
     </div>    
 </div>

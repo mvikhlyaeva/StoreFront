@@ -1,6 +1,7 @@
 <div class="container">
     <h2 class="title text-center"> Cells</h2>
     <div class="col-lg-4 mx-auto mb-3 col-sm-6 col-10"  *ngFor ="let cell of cells">
-        <app-cell-card [cell]="cell"></app-cell-card>
+        <app-cell-card [cell]="cell" (onDeleteClick)="getCellForDelete($event)"></app-cell-card>     
     </div>
 </div>
+<app-modal-delete  [component]="'cell'" (clickDelete)="deleteCell()"></app-modal-delete>

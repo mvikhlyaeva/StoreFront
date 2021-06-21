@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { CellType } from 'dataTypes/CellType';
 import { Cell } from 'tables/Cell';
 
@@ -11,13 +11,18 @@ export class CellCardComponent implements OnInit {
 
     @Input() cell: Cell;
 
+    @Output() onDeleteClick: EventEmitter<Cell> = new EventEmitter();
+
     cellType: string;
 
     constructor() { }
 
     ngOnInit(): void {
         this.cellType = CellType[this.cell.type];
-        console.log(this.cellType);
     }
 
+    GetCell(cell){
+        console.log(cell);
+        this.onDeleteClick.emit(cell);
+    }
 }
